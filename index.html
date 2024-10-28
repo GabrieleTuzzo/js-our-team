@@ -25,24 +25,27 @@
                 </p>
             </section>
             <section class="container my-5">
-                <div id="card-container" class="row g-4">
-                    <div class="col-12 col-md-6 col-xl-4 d-none card-template">
-                        <div class="text-bg-dark">
-                            <div class="d-flex flex-row">
-                                <div>
-                                    <img class="img-fluid card-img" />
-                                </div>
-                                <div class="w-100 p-3">
-                                    <h5 class="card-header fw-bold"></h5>
-                                    <p class="card-role"></p>
-                                    <a class="card-email" href="#"></a>
-                                </div>
-                            </div>
+                <div id="card-container" class="row g-4"></div>
+            </section>
+        </main>
+
+        <!-- Card template -->
+        <template id="template--card">
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="text-bg-dark">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <img class="img-fluid card-img" />
+                        </div>
+                        <div class="w-100 p-3">
+                            <h5 class="card-header fw-bold"></h5>
+                            <p class="card-role"></p>
+                            <a class="card-email" href="#"></a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </template>
 
         <!-- SCRIPT -->
         <script

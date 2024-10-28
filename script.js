@@ -37,22 +37,25 @@ const teamMembers = [
     },
 ]
 
-const cardTemplate = document.querySelector('#card-container .card-template')
+const cardTemplate = document.getElementById('template--card')
 const cardContainer = document.getElementById('card-container')
 const DOCfragment = document.createDocumentFragment()
 
 for (let i = 0; i < teamMembers.length; i++) {
-    const newCard = cardTemplate.cloneNode(true)
-    newCard.classList.remove('d-none')
-
+    const newCard = cardTemplate.content.cloneNode(true)
     const { name, role, email, img } = teamMembers[i]
 
     newCard.querySelector('img').src = img
-    newCard.querySelector('.card-header').innerText = name.toUpperCase()
-    newCard.querySelector('.card-role').innerText = role
-    newCard.querySelector('.card-email').innerText = email
+
+    setInnerText(newCard, '.card-header', name.toUpperCase())
+    setInnerText(newCard, '.card-role', role)
+    setInnerText(newCard, '.card-email', email)
 
     DOCfragment.append(newCard)
 }
 
 cardContainer.append(DOCfragment)
+
+function setInnerText(node, selector, value) {
+    node.querySelector(selector).innerText = value
+}
