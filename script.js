@@ -47,17 +47,10 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     const { name, role, email, img } = teamMembers[i]
 
-    const assignImg = newCard.querySelector('img')
-    assignImg.src = img
-
-    const assignName = newCard.querySelector('.card-header')
-    assignName.innerText = name.toUpperCase()
-
-    const assignRole = newCard.querySelector('.card-role')
-    assignRole.innerText = role
-
-    const assignEmail = newCard.querySelector('.card-email')
-    assignEmail.innerText = email
+    newCard.querySelector('img').src = img
+    newCard.querySelector('.card-header').innerText = name.toUpperCase()
+    newCard.querySelector('.card-role').innerText = role
+    newCard.querySelector('.card-email').innerText = email
 
     DOCfragment.append(newCard)
 }
